@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class SheltersController extends Controller
 {
+    public function create()
+    {
+        return view('shelter.create');
+    }
+
     public function show()
     {
         $shelters = Shelter::all();

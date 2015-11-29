@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class HelplinesController extends Controller
 {
+    public function create()
+    {
+        return view('helpline.create');
+    }
+
     public function show()
     {
         $helpline = Helpline::all();

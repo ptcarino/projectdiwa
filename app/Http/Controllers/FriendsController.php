@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class FriendsController extends Controller
 {
+    public function create()
+    {
+        return view('friend.create');
+    }
+
     public function show()
     {
         $friends = Friend::all();

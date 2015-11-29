@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class CitiesController extends Controller
 {
+    public function create()
+    {
+        return view('city.create');
+    }
+
     public function show()
     {
         $cities = City::all();

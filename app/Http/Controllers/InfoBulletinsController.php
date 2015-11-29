@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class InfoBulletinsController extends Controller
 {
+    public function create()
+    {
+        return view('infobulletin.create');
+    }
+
     public function show()
     {
         $infobulletin = InfoBulletin::all();
