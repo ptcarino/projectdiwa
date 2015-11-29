@@ -3,10 +3,12 @@
 @section('content')
     <h1>Add a City</h1>
     <hr/>
-    {!! Form::open() !!}
+    {!! Form::open(['url' => 'cities']) !!}
     <div class="form-group">
         {!! Form::label('name', 'Name:') !!}
-        {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            {!! Form::text('name', null, ['class' => 'form-control']) !!}
+        {!! Form::label('provinces_id', 'Province:') !!}
+            {!! Form::select('provinces_id', $province, null, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">

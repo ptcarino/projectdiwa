@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('cities', 'CitiesController@index');
 Route::get('cities/create', 'CitiesController@create');
+Route::post('cities', 'CitiesController@store');
 Route::get('citizens', 'CitizensController@index');
 Route::get('citizens/create', 'CitizensController@create');
 Route::get('friends', 'FriendsController@index');
@@ -31,3 +32,4 @@ Route::get('shelters', 'SheltersController@index');
 Route::get('shelters/create', 'SheltersController@create');
 Route::get('provinces', 'ProvincesController@index');
 Route::get('provinces/create', 'ProvincesController@create');
+Route::post('provinces', 'ProvincesController@store');

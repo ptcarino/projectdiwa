@@ -8,6 +8,6 @@ class Province extends Model
 {
     protected $fillable = [
         'name',
-        'region_id'
+        'regions_id'
     ];
 }

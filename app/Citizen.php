@@ -12,7 +12,7 @@ class Citizen extends Model
         'middlename',
         'gender',
         'mobile',
-        'city_id',
-        'account_id'
+        'cities_id',
+        'accounts_id'
     ];
 }

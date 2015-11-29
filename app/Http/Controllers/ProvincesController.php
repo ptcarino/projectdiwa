@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Province;
+use App\Region;
 use Request;
 
 use App\Http\Requests;
@@ -13,7 +14,9 @@ class ProvincesController extends Controller
 {
     public function create()
     {
-        return view('province.create');
+        $region = Region::lists('name', 'id');
+
+        return view('province.create', compact('region', $region));
     }
 
     public function index()

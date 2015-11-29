@@ -9,7 +9,7 @@ class InfoBulletin extends Model
     protected $fillable = [
         'content',
         'time_posted',
-        'rro_id',
-        'citizen_id'
+        'rros_id',
+        'citizens_id'
     ];
 }
