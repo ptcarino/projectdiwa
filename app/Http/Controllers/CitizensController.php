@@ -15,7 +15,7 @@ class CitizensController extends Controller
         return view('citizen.create');
     }
 
-    public function show()
+    public function index()
     {
         $citizens = Citizen::all();
 
@@ -24,10 +24,10 @@ class CitizensController extends Controller
 
     public function store()
     {
-        $input = Citizen::all();
+        $input = Request::all();
 
         Citizen::create($input);
 
-        return $input;
+        return redirect('citizens');
     }
 }

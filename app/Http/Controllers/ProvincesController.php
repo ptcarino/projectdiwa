@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Province;
-use Illuminate\Http\Request;
+use Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -16,7 +16,7 @@ class ProvincesController extends Controller
         return view('province.create');
     }
 
-    public function show()
+    public function index()
     {
         $provinces = Province::all();
 
@@ -25,10 +25,10 @@ class ProvincesController extends Controller
 
     public function store()
     {
-        $input = Province::all();
+        $input = Request::all();
 
         Province::create($input);
 
-        return $input;
+        return redirect('provinces');
     }
 }

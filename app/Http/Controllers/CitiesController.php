@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\City;
-use Illuminate\Http\Request;
+use Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +15,7 @@ class CitiesController extends Controller
         return view('city.create');
     }
 
-    public function show()
+    public function index()
     {
         $cities = City::all();
 
@@ -24,10 +24,10 @@ class CitiesController extends Controller
 
     public function store()
     {
-        $input = City::all();
+        $input = Request::all();
 
         City::create($input);
 
-        return $input;
+        return redirect('cities');
     }
 }
