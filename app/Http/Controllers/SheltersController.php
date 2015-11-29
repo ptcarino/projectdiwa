@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use App\Shelter;
-use Illuminate\Http\Request;
+use Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -12,10 +13,12 @@ class SheltersController extends Controller
 {
     public function create()
     {
-        return view('shelter.create');
+        $city = City::lists('name', 'id');
+
+        return view('shelter.create', compact('city', $city));
     }
 
-    public function show()
+    public function index()
     {
         $shelters = Shelter::all();
 
@@ -24,10 +27,10 @@ class SheltersController extends Controller
 
     public function store()
     {
-        $input = Shelter::all();
+        $input = Request::all();
 
         Shelter::create($input);
 
-        return $input;
+        return redirect('shelters');
     }
 }
