@@ -14,15 +14,17 @@ class SheltersController extends Controller
     public function create()
     {
         $city = City::lists('name', 'id');
+        $page_title = 'Shelters';
 
-        return view('shelter.create', compact('city', $city));
+        return view('shelter.create', compact('city', 'page_title'));
     }
 
     public function index()
     {
         $shelters = Shelter::all();
+        $page_title = 'Shelters';
 
-        return view('shelter.index', compact('shelters'));
+        return view('shelter.index', compact('shelters', 'page_title'));
     }
 
     public function store()

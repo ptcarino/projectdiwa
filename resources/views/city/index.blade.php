@@ -6,13 +6,13 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>City</th>
+                <th>Province</th>
             </tr>
-            @foreach($shelters as $shelter)
+            @foreach($cities as $city)
                 <tr>
-                    <td>{{ $shelter->id }}</td>
-                    <td>{{ $shelter->name }}</td>
-                    <td>{{ $shelter->cities_id }}</td>
+                    <td>{{ $city->id }}</td>
+                    <td>{{ $city->name }}</td>
+                    <td>{{ $city->provinces_id }}</td>
                 </tr>
             @endforeach
         </table>

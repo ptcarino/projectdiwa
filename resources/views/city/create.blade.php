@@ -1,4 +1,4 @@
-@extends('app')
+@extends('admin_template')
 
 @section('content')
     <h1>Add a City</h1>

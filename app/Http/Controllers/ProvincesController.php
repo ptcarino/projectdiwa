@@ -15,15 +15,17 @@ class ProvincesController extends Controller
     public function create()
     {
         $region = Region::lists('name', 'id');
+        $page_title = 'Provinces';
 
-        return view('province.create', compact('region', $region));
+        return view('province.create', compact('region', 'page_title'));
     }
 
     public function index()
     {
         $provinces = Province::all();
+        $page_title = 'Provinces';
 
-        return $provinces;
+        return view('provinces.index', compact('provinces', 'page_title'));
     }
 
     public function store()

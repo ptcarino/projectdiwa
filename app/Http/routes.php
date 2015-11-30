@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $page_title = 'Dashboard';
+    return view('admin_template', compact('page_title'));
 });
 
 Route::resource('cities', 'CitiesController');

@@ -14,14 +14,17 @@ class CitiesController extends Controller
     public function create()
     {
         $province = Province::lists('name', 'id');
-        return view('city.create', compact('province', $province));
+        $page_title = 'Cities';
+
+        return view('city.create', compact('province', 'page_title'));
     }
 
     public function index()
     {
         $cities = City::all();
+        $page_title = 'Cities';
 
-        return $cities;
+        return view('city.index', compact('cities', 'page_title'));
     }
 
     public function store()
