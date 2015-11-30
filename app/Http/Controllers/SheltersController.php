@@ -22,7 +22,7 @@ class SheltersController extends Controller
     {
         $shelters = Shelter::all();
 
-        return $shelters;
+        return view('shelter.index', compact('shelters'));
     }
 
     public function store()
