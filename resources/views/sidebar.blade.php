@@ -105,8 +105,8 @@
             <li class="treeview">
                 <a href="#"><span>Region</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">List</a></li>
-                    <li><a href="#">Add</a></li>
+                    <li><a href="{{ url('regions') }}">List</a></li>
+                    <li><a href="{{ url('regions/create') }}">Add</a></li>
                     <li><a href="#">Edit</a></li>
                     <li><a href="#">Delete</a></li>
                 </ul>

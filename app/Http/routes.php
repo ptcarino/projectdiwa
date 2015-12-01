@@ -24,3 +24,4 @@ Route::resource('infobulletins', 'InfoBulletinsController');
 Route::resource('locationrecords', 'LocationRecordsController');
 Route::resource('shelters', 'SheltersController');
 Route::resource('provinces', 'ProvincesController');
+Route::resource('regions', 'RegionsController');

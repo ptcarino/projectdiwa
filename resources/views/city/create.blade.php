@@ -14,4 +14,5 @@
     <div class="form-group">
         {!! Form::submit('Add City', ['class' => 'btn btn-primary form-control']) !!}
     </div>
+    {!! Form::close() !!}
 @stop

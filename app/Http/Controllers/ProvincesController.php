@@ -25,7 +25,7 @@ class ProvincesController extends Controller
         $provinces = Province::all();
         $page_title = 'Provinces';
 
-        return view('provinces.index', compact('provinces', 'page_title'));
+        return view('province.index', compact('provinces', 'page_title'));
     }
 
     public function store()
